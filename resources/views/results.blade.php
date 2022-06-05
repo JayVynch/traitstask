@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+       <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+
+        <style>
+            body {
+                font-family: 'Nunito', sans-serif;
+            }
+        </style>
+    </head>
+    <body class="antialiased">
+        <div class="bg-blue-400 h-screen">
+            <div class="relative overflow-hidden">
+                <header class="relative">
+                    <div class="bg-blue-400 pt-6">
+                        <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+                            <div class="flex items-center flex-1">
+                                <div class="flex items-center justify-between w-full md:w-auto">
+                                    <a href="#">
+                                        <span class="sr-only">teamway</span>
+                                        <img class="h-8 w-auto sm:h-10"  src="https://uploads-ssl.webflow.com/60590851dbb9ac7f8483c542/605a6256621174137c7cb8ba_Teamway_Logo.svg" loading="lazy" alt="">
+                                    </a>
+                                    <div class="-mr-2 flex items-center md:hidden">
+                                        <button type="button" class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
+                                            <span class="sr-only">Open main menu</span>
+                                            <!-- Heroicon name: outline/menu -->
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                            </svg>
+                                        </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+
+                
+                    <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
+                        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                            <div class="px-5 pt-4 flex items-center justify-between">
+                                <div>
+                                    <img class="h-8 w-auto"  src="https://uploads-ssl.webflow.com/60590851dbb9ac7f8483c542/605a6256621174137c7cb8ba_Teamway_Logo.svg" loading="lazy" alt="">
+                                </div>
+                                <div class="-mr-2">
+                                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600">
+                                        <span class="sr-only">Close menu</span>
+                                        <!-- Heroicon name: outline/x -->
+                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <main>
+                    <div class="pt-10 bg-blue-400 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+                        <div class="mx-auto max-w-7xl lg:px-8">
+                            <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+                                <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+                                    <div class="lg:py-24">
+                                        <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                                            <span class="block">Traits Calculator</span>
+                                        </h1>
+                                        <p class="text-base text-white sm:text-xl lg:text-lg xl:text-xl">
+                                          Are You a An Introvert Or An Extrovert ??
+                                        </p>
+                                        <p class="text-base text-white sm:text-xl lg:text-lg xl:text-xl">
+                                          Results
+                                        </p>
+                                        <div x-cloak class="mt-10 sm:mt-12">
+                                            <div class="bg-white rounded-lg">
+                                                <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+                                                    <h2 class="text-2xl leading-6 text-gray-400 sm:text-4xl">
+                                                      <span class="block">Here is your Result</span>
+                                                    </h2>
+                                                    <p class="mt-4 text-4xl font-extrabold  text-blue-400">You are an {{ $result }}vert</p>
+                                                </div>
+                                            </div>
+                                            <a href="{{ route('welcome') }}" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto">
+                                                Go Back
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
